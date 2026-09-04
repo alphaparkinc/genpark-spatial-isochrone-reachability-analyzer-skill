@@ -1,0 +1,45 @@
+{
+  "name": "genpark-spatial-isochrone-reachability-analyzer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-modal travel-time isochrone reachability boundary calculator for urban mobility and logistics accessibility.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "geospatial",
+  "tags": [
+    "isochrone",
+    "reachability",
+    "urban-planning",
+    "mobility-ai",
+    "targomo"
+  ],
+  "inputs": {
+    "origin_lat": {
+      "type": "number"
+    },
+    "origin_lng": {
+      "type": "number"
+    },
+    "travel_mode": {
+      "type": "string"
+    },
+    "cutoff_minutes": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "isochrone_id": {
+      "type": "string"
+    },
+    "estimated_reach_radius_km": {
+      "type": "number"
+    },
+    "accessible_area_sq_km": {
+      "type": "number"
+    },
+    "isochrone_polygon_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
